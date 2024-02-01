@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typescript Web App</title>
+</head>
+<body>
+  <h1>Форма</h1>
+  <form action="/submit" method="post" enctype="multipart/form-data">
+    <label for="text-field">Текстовое поле:</label>
+    <input type="text" id="text-field" name="textField" required>
+    <br>
+
+    <label for="file1">Файл 1:</label>
+    <input type="file" id="file1" name="file1" accept=".txt" required>
+    <br>
+
+    <label for="file2">Файл 2:</label>
+    <input type="file" id="file2" name="file2" accept=".txt" required>
+    <br>
+
+    <button type="submit">Отправить</button>
+  </form>
+</body>
+</html>
