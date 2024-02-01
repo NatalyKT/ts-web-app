@@ -25,8 +25,10 @@ npm start
 curl -X POST -H "Content-Type: application/json" -d '{"text": "Пример текста", "file1": "Base64-код файла 1", "file2": "Base64-код файла 2"}' http://localhost:3000/submit
 ```
 
+  
 ### API Реализованных Функций
 1. **Отправка текстовых данных для сравнения**
+   
 URL: `/submit`
 
 Метод: `POST`
@@ -52,6 +54,7 @@ URL: `/submit`
 }
 ```
 2. **Скачивание результата сравнения**
+   
 URL: `/download`
 
 Метод: `GET`
