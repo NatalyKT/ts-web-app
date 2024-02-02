@@ -1,4 +1,3 @@
-// src/routes/download.ts
 import { Router, Request, Response } from 'express';
 import { calculateCosineSimilarity } from '../utils/compareTexts';
 import fs from 'fs';
