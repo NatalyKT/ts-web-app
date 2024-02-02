@@ -1,4 +1,3 @@
-// src/routes/result.ts
 import { Router, Request, Response } from 'express';
 import { calculateCosineSimilarity } from '../utils/compareTexts';
 
@@ -22,7 +21,7 @@ resultRouter.post('/', (req: Request, res: Response) => {
     const jsonResponse = {
         requestText: textField,
         similarity: similarity,
-        metric: 'косинусное сходство', // Используемая в данном проекте
+        metric: 'косинусное сходство', // Используемая в данном проекте метрика (как пример)
     };
 
     res.json(jsonResponse);

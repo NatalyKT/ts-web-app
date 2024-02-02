@@ -1,4 +1,3 @@
-// src/routes/submit.ts
 import { Router, Request, Response } from 'express';
 import fs from 'fs';
 import { calculateCosineSimilarity } from '../utils/compareTexts';
@@ -18,12 +17,10 @@ interface SubmitErrorResponse {
 // Общий тип ответа
 type SubmitResponse = SubmitSuccessResponse | SubmitErrorResponse;
 
-// Создаем Router для /submit
 const submitRouter = Router();
 
 // Обработчик для GET-запроса по маршруту /submit
 submitRouter.get('/', (req: Request, res: Response) => {
-    // Рендерим страницу с формой
     res.render('index', { error: undefined });
 });
 
@@ -68,9 +65,8 @@ submitRouter.post('/submit', (req: Request, res: Response) => {
     // Вычисляем косинусное сходство между текстами файлов
     const similarity = calculateCosineSimilarity(decodedFile1, decodedFile2);
 
-    // Если все проверки пройдены, можно продолжить обработку данных
-
-    // Ваши действия с данными, например, сохранение в базу данных, отправка на сервер и т. д.
+    // Если все проверки пройдены, тут уже можно продолжить обработку данных, например, 
+    // сохранение в базу данных, отправку на сервер и т.д.
 
     // Готовим ответ для успешного запроса
     const successResponse: SubmitSuccessResponse = {
