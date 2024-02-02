@@ -26,7 +26,7 @@ downloadRouter.post('/', (req: Request, res: Response) => {
     fs.writeFileSync(filePath, resultText);
 
     // Отправляем файл для скачивания
-    res.download(filePath, 'Ответ на запрос.txt', (err) => {
+    res.download(filePath, 'Ответ на запрос.txt', (err: NodeJS.ErrnoException | null) => {
         // Удаляем файл после отправки
         if (err) {
             console.error('Ошибка при отправке файла:', err);
